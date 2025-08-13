@@ -1,0 +1,117 @@
+{
+  "totalElements": 18,
+  "inputs": 5,
+  "buttons": 13,
+  "checkboxes": 2,
+  "selects": 0,
+  "elements": [
+    {
+      "type": "input",
+      "fieldType": "text",
+      "label": "1. Aadhaar Number/ आधार संख्या",
+      "id": "ctl00_ContentPlaceHolder1_txtadharno"
+    },
+    {
+      "type": "input",
+      "fieldType": "text",
+      "label": "2. Name of Entrepreneur / उद्यमी का नाम",
+      "id": "ctl00_ContentPlaceHolder1_txtownername"
+    },
+    {
+      "type": "input",
+      "fieldType": "checkbox",
+      "label": "",
+      "id": "ctl00_ContentPlaceHolder1_chkDecarationA"
+    },
+    {
+      "type": "input",
+      "fieldType": "checkbox",
+      "label": "",
+      "id": "checkbox"
+    },
+    {
+      "type": "button",
+      "fieldType": "button",
+      "label": "Validate & Generate OTP",
+      "id": "ctl00_ContentPlaceHolder1_btnValidateAadhaar"
+    },
+    {
+      "type": "button",
+      "fieldType": "button",
+      "label": "Text To Speech",
+      "id": "speak"
+    },
+    {
+      "type": "button",
+      "fieldType": "button",
+      "label": "Bigger Text",
+      "id": "btn-s9"
+    },
+    {
+      "type": "button",
+      "fieldType": "button",
+      "label": "Text Spacing",
+      "id": "btn-s13"
+    },
+    {
+      "type": "button",
+      "fieldType": "button",
+      "label": "Line Height",
+      "id": "btn-s12"
+    },
+    {
+      "type": "button",
+      "fieldType": "button",
+      "label": "Highlight Links",
+      "id": "btn-s10"
+    },
+    {
+      "type": "button",
+      "fieldType": "button",
+      "label": "Dyslexia Friendly",
+      "id": "btn-df"
+    },
+    {
+      "type": "button",
+      "fieldType": "button",
+      "label": "Hide Images",
+      "id": "btn-s11"
+    },
+    {
+      "type": "button",
+      "fieldType": "button",
+      "label": "Cursor",
+      "id": "btn-cursor"
+    },
+    {
+      "type": "button",
+      "fieldType": "button",
+      "label": "Light-Dark",
+      "id": "dark-btn"
+    },
+    {
+      "type": "button",
+      "fieldType": "button",
+      "label": "Invert Colors",
+      "id": "btn-invert"
+    },
+    {
+      "type": "button",
+      "fieldType": "button",
+      "label": "Reset All Settings",
+      "id": "reset-all"
+    },
+    {
+      "type": "button",
+      "fieldType": "button",
+      "label": "Accessibility Options",
+      "id": "uw-widget-custom-trigger"
+    },
+    {
+      "type": "input",
+      "fieldType": "otp",
+      "label": "*Enter One Time Password(OTP) Code",
+      "id": "ctl00_ContentPlaceHolder1_txtOtp1"
+    }
+  ]
+}
