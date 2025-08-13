@@ -29,7 +29,7 @@ app.use(express.urlencoded({ extended: true, limit: '10mb' }))
 app.use('/api/udyam', udyamRoutes)
 app.use('/api/fields', fieldRoutes)
 
-app.get('/health', (req, res) => {
+app.get('/', (req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() })
 })
 
@@ -42,10 +42,10 @@ app.use((req, res) => {
 })
 
 // Graceful shutdown
-process.on('SIGINT', async () => {
-  await prisma.$disconnect()
-  process.exit(0)
-})
+// process.on('SIGINT', async () => {
+//   await prisma.$disconnect()
+//   process.exit(0)
+// })
 
 app.listen(PORT, () => {
   console.log(`🚀 Udyam API Server running on port ${PORT}`)
