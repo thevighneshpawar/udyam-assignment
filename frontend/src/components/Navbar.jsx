@@ -20,7 +20,7 @@ export default function Navbar() {
                 {/* Left side - Logo & Title */}
                 <div className="flex items-center gap-3">
                     <img
-                        src="../public/assets/MINISTRY_NAME.webp"
+                        src="/assets/MINISTRY_NAME.webp"
                         alt="Emblem"
                         className="h-10 w-auto"
                     />
