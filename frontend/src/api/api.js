@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const API_BASE = 'http://localhost:3000/api'
+const API_BASE = import.meta.env.API_BASE
 
 // Axios instance
 const api = axios.create({
