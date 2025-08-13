@@ -6,7 +6,7 @@
 
 generator client {
   provider = "prisma-client-js"
-  output   = "../generated/prisma"
+
 }
 
 datasource db {
@@ -14,16 +14,58 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Submission {
-  id          Int      @id @default(autoincrement())
-  createdAt   DateTime @default(now())
+model UdyamSubmission {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  // Step 1 - Aadhaar Verification
+  aadhaarNumber    String?  @db.VarChar(12)
+  entrepreneurName String?  @db.VarChar(100)
+  aadhaarConsent   Boolean  @default(false)
+  otpCode          String?  @db.VarChar(6)
+  aadhaarVerified  Boolean  @default(false)
+  
+  // Step 2 - PAN Details
+  organizationType String?  @db.VarChar(50)
+  panNumber        String?  @db.VarChar(10)
+  panHolderName    String?  @db.VarChar(100)
+  dobOrDoi         String?  @db.VarChar(20) // Date as string DD/MM/YYYY
+  panConsent       Boolean  @default(false)
+  panVerified      Boolean  @default(false)
+  
+  // Submission Status
+  currentStep      Int      @default(1)
+  isCompleted      Boolean  @default(false)
+  
+  // Metadata
+  ipAddress        String?
+  userAgent        String?
+  submissionData   Json?    // Store raw form data as JSON
+  validationErrors Json?    // Store validation errors
+  
+  @@map("udyam_submissions")
+}
+
+model FormField {
+  id          String  @id @default(cuid())
   step        Int
-  aadhaar     String?
-  nameAadhaar String?
-  otpMasked   String?
-  pan         String?
-  namePan     String?
-  dob         String?
-  typeOfOrg   String?
-  rawData     Json
+  elementType String  @db.VarChar(50)
+  fieldType   String  @db.VarChar(50)
+  fieldId     String  @db.VarChar(100)
+  fieldName   String? @db.VarChar(100)
+  label       String  @db.Text
+  type        String  @db.VarChar(50)
+  placeholder String?
+  required    Boolean @default(false)
+  maxLength   Int?
+  minLength   Int?
+  pattern     String?
+  options     Json?   // For select/radio options
+  
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  @@unique([step, fieldId])
+  @@map("form_fields")
 }

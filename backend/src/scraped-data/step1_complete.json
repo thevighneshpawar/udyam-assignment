@@ -1,0 +1,55 @@
+[
+  {
+    "elementType": "input",
+    "fieldType": "text",
+    "id": "ctl00_ContentPlaceHolder1_txtadharno",
+    "name": "ctl00$ContentPlaceHolder1$txtadharno",
+    "label": "1. Aadhaar Number/ आधार संख्या",
+    "type": "text",
+    "placeholder": "Your Aadhaar No",
+    "required": false,
+    "maxLength": 12,
+    "pattern": "",
+    "value": "",
+    "className": "form-control"
+  },
+  {
+    "elementType": "input",
+    "fieldType": "text",
+    "id": "ctl00_ContentPlaceHolder1_txtownername",
+    "name": "ctl00$ContentPlaceHolder1$txtownername",
+    "label": "2. Name of Entrepreneur / उद्यमी का नाम",
+    "type": "text",
+    "placeholder": "Name as per Aadhaar",
+    "required": false,
+    "maxLength": 100,
+    "pattern": "",
+    "value": "",
+    "className": "form-control"
+  },
+  {
+    "elementType": "input",
+    "fieldType": "checkbox",
+    "id": "ctl00_ContentPlaceHolder1_chkDecarationA",
+    "name": "ctl00$ContentPlaceHolder1$chkDecarationA",
+    "label": "",
+    "type": "checkbox",
+    "required": false,
+    "checked": true,
+    "value": "on",
+    "className": ""
+  },
+  {
+    "elementType": "input",
+    "fieldType": "otp",
+    "id": "ctl00_ContentPlaceHolder1_txtOtp1",
+    "name": "ctl00$ContentPlaceHolder1$txtOtp1",
+    "label": "*Enter One Time Password(OTP) Code",
+    "type": "text",
+    "placeholder": "OTP code",
+    "required": false,
+    "maxLength": 6,
+    "pattern": "",
+    "className": "form-control"
+  }
+]
